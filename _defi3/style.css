@@ -1,0 +1,118 @@
+@import 'https://fonts.googleapis.com/css?family=Lato|Ubuntu';
+@import 'https://fonts.googleapis.com/css?family=Kaushan+Script';
+
+body {
+ background-color: #ecf0f1;
+ margin: 0;
+ padding: 0;
+ font-family: 'Lato', sans-serif;
+}
+
+#wrap {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/*  HEADER */
+#wrap #header {
+    background-color: #16a085;
+    margin: 0;
+    padding: 0;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;;
+}
+/* NAVBAR */
+#wrap #header #navbar {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding-top: 3%;
+}
+#wrap #header #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#wrap #header #navbar ul li {
+    display: inline;
+    margin: 0;
+    letter-spacing: 0.5em;
+}
+#wrap #header #navbar ul li a {
+    text-decoration: none;
+    display: inline;
+    padding: 2% 5%;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+#navbar  ul li a:hover {
+    box-shadow: 2px 2px 1px #7f8c8d;
+    background-color: #1abc9c;
+}
+#wrap #header #navbar #title {
+    padding-right: 20%;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+}
+
+/* CONTENT */
+#wrap #content {
+    background-color: #fff;
+    margin:  0 5%;
+}
+#content > div {
+    padding: 5%;
+}
+hr {
+    width: 70%;
+}
+#intro {
+  margin-left: 5%;
+}
+#wrap #content #intro #secondary-text {
+    color: #bdc3c7;
+    font-size: 0.7em;
+    padding-left: 4%;
+}
+
+.section {
+    display: flex;
+    justify-content: space-around;
+}
+.section-img {
+  margin-right: 2%;
+}
+.section-text {
+  margin-right: 8%;
+}
+ .view {
+    background-color: #3498db;
+    border: 1px solid #7f8c8d;
+    color: #ecf0f1;
+    padding: 1%;
+    border-radius: 5%;
+}
+.view:hover {
+    box-shadow: 5px 5px 12px #7f8c8d;
+    background-color: #2980b9;
+}
+
+/* FOOTER */
+#wrap footer {
+    background-color: #16a085;
+    margin: 0;
+    padding: 1%;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+#wrap footer p {
+    text-align: center;
+    letter-spacing: 0.5em;
+}
