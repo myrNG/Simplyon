@@ -10,3 +10,5 @@
 * **Défi 2:** [Fruits](https://github.com/myrNG/Simplyon/tree/master/_fruits)
 * **Défi 3:** [Mise en page](https://github.com/myrNG/Simplyon/tree/master/_defi3)
 * **Défi 4:** [Mise en page 2](https://github.com/myrNG/Simplyon/tree/master/_defi4)
+
+###Semaine 2
