@@ -64,3 +64,7 @@ section {
 .ligne {
   margin: 1%;
 }
+img {
+    display: inline-block;
+    vertical-align: top; /* Permet de justifier vers le haut les images du block */
+}
