@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Défi calculatrice</title>
+    </head>
+    <body>
+        <h2>Défi calculatrice</h2>
+        <p>Ecrire un programme qui demande:</p>
+        <ul>
+            <li>de choisir une opération (+ / - *)</li>
+            <li>un premier chiffre</li>
+            <li>un second chiffre</li>
+            <li>Le programme affiche ensuite le résultat de l'opération</li>
+        </ul>
+
+<script type="text/javascript">
+        var operation = prompt("Choisissez un type d'opération (+, /, - ou *):");
+        var choix1 = parseInt(prompt("Choisissez un 1er chiffre :"));
+        var choix2 =  parseInt(prompt("Choisissez un 2nd chiffre :"));
+
+        // Switch
+        switch (operation) {
+            case "+":
+                var total = choix1 + choix2;
+
+                break;
+            case "/":
+                var total = choix1 / choix2;
+
+                break;
+            case "-":
+                var total = choix1 - choix2;
+
+                break;
+            case "*":
+                var total = choix1 * choix2;
+
+                break;
+            default:
+                alert("Vous n'avez pas saisi d'opérateur correct, veuillez recommencer.")
+        };
+        alert(total);
+</script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Le cheval blanc...(suite)</title>
+    </head>
+    <body>
+        <h2>Cheval Blanc 2 - le retour</h2>
+        <p>Implémenter les TODO et FIXME</p>
+
+        <script type="text/javascript">
+            // on affiche la question
+            var reponseQuestion1 = prompt("De quelle couleur est le cheval blanc d'Henri IV");
+            reponseQuestion1 = reponseQuestion1.toLowerCase();
+            console.log('reponseQuestion1', reponseQuestion1); // on affiche la réponse dans la console
+            // si la réponse donnée est "blanc"
+            if(reponseQuestion1 == "blanc"){
+                // FIXME : gérer la casse : Blanc BLANC...
+                alert('Bravo');
+                // affichage de la 2nde question
+                var reponseQuestion2 = prompt('Combien y a t il de sept nains ?');
+                // si la réponse données est 7
+                if( reponseQuestion2 == parseInt('7')){
+
+                    // FIXME : gérer les réponses textuelles, avec différentes casses...
+                    // FIXME : gérer les réponses de types 7, 07, 007, 7.0
+                    alert('Bravo');
+                } else {
+                    alert('Erreur');
+                    // TODO : permettre une deuxième réponse pour la question 2
+                }
+            } else
+                alert('Erreur');
+                // TODO : permettre une deuxième réponse pour la question 1
+
+        </script>
+    </body>
+</html>

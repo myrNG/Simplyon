@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>De quelle couleur est le cheval blanc d'Henry IV?</title>
+        </head>
+        <body>
+            <h2>Défi:</h2>
+            <p>Ecrire un programme qui demande:</p>
+            <ul>
+                <li>de quelle couleur est le cheval blanc d’Henri 4,<li>
+                <li>puis combien y a-t-il de 7 nains ?</li>
+                <li>le script autorise 2 tentatives par question</li>
+            </ul>
+            <script type="text/javascript">
+                // Question posée
+                var reponse = prompt("De quelle couleur est le cheval blanc d'Henry IV?");
+
+                /* Dans cette consdition, peu importe si la réponse est bonne ou fausse,
+                la seconde question sera quand même posée.*/
+                if (reponse == "blanc") {
+                    alert("Bravo!");
+
+                    var reponse2 = prompt("Combien y a t-il de sept nains?");
+                    if (reponse2 == "7") {
+                        alert("Bravo!");
+                    } else {
+                        alert("Erreur, la réponse était '7'!");
+                    };
+                } else {
+                    alert("Erreur, la réponse était 'blanc'!")
+
+                    var reponse2 = prompt("Combien y a t-il de sept nains?");
+                    if (reponse2 == "7") {
+                        alert("Bravo!");
+                    } else {
+                        alert("Erreur, la réponse était '7'!");
+                    };
+                };
+
+            </script>
+        </body>
+    </html>

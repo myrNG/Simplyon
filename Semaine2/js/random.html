@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Entrainement JS</title>
+    </head>
+    <body>
+        <h2>Entrainement JS visible sur la console</h2>
+        <p>Écrire un script/programme qui demande de deviner un chiffre tiré au hasard entre 0 et 9 ( 2 tentatives autorisées ).</p>
+        <script type="text/javascript">
+
+        var chiffre = Math.floor(Math.random() * 10);
+        var choix = prompt("Devinez un chiffre entre 0 et 9 :");
+
+
+        if(choix == chiffre) {
+            alert("Vous avez trouvé le chiffre " + chiffre + " bravo!");
+        } else if( choix !== chiffre) {
+                alert("Erreur! Encore un essai!");
+
+                 choix = prompt("Devinez un chiffre entre 0 et 9 (dernier essai) :");
+                 if(choix == chiffre) {
+                     alert("Vous avez trouvé le chiffre " + chiffre + " bravo!");
+                 } else if( choix !== chiffre) {
+                         alert("Perdu!");
+                }
+        };
+        alert("Il fallait trouver " + chiffre);
+        </script>
+    </body>
+</html>
