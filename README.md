@@ -5,9 +5,9 @@
 7 mois (juillet 2016 à janvier 2017)
 
 ##Index
-[Semaine 1](#semaine-1)
-[Semaine 2](#semaine-2)
-[Semaine 3](#semaine-3)
+* [Semaine 1](#semaine-1)
+* [Semaine 2](#semaine-2)
+* [Semaine 3](#semaine-3)
 
 ##Projets
 ###Semaine 1 <a id="semaine-1"></a>
