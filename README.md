@@ -21,3 +21,5 @@
 
 
 ###Semaine 3
+* **Défi 1:** [Login / password]()
+* **Défi 2:** [Calcul mental]()
