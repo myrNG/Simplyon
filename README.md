@@ -7,7 +7,7 @@
 ##Index
 
 | 1er Trimestre       | 2nd Trimestre           | 3ème Trimestre  |
-| ------------- |:-------------:| -----:|
+| :-------------: |:-------------:| :-----:|
 | [Semaine 1](#semaine-1)      | soon | soon |
 | [Semaine 2](#semaine-2)     | soon      |   soon |
 | [Semaine 3](#semaine-3) |  soon      |    soon |
