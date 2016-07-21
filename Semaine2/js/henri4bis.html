@@ -10,30 +10,35 @@
         <p>Implémenter les TODO et FIXME</p>
 
         <script type="text/javascript">
+            // Variables
+            var question1 = "De quelle couleur est le cheval blanc d'Henri IV";
+            var reponse1 = "blanc";
+            var question2 = "Combien y a t il de 7 nains ?";
+            var reponse2 = '7';
+            var reponse2Text = 'sept';
+            var messageSucces = "Bravo";
+            var messageErreur = "Faux";
             // on affiche la question
-            var reponseQuestion1 = prompt("De quelle couleur est le cheval blanc d'Henri IV");
-            reponseQuestion1 = reponseQuestion1.toLowerCase();
-            console.log('reponseQuestion1', reponseQuestion1); // on affiche la réponse dans la console
-            // si la réponse donnée est "blanc"
-            if(reponseQuestion1 == "blanc"){
-                // FIXME : gérer la casse : Blanc BLANC...
-                alert('Bravo');
-                // affichage de la 2nde question
-                var reponseQuestion2 = prompt('Combien y a t il de sept nains ?');
-                // si la réponse données est 7
-                if( reponseQuestion2 == parseInt('7')){
-
-                    // FIXME : gérer les réponses textuelles, avec différentes casses...
-                    // FIXME : gérer les réponses de types 7, 07, 007, 7.0
-                    alert('Bravo');
-                } else {
-                    alert('Erreur');
-                    // TODO : permettre une deuxième réponse pour la question 2
-                }
-            } else
-                alert('Erreur');
-                // TODO : permettre une deuxième réponse pour la question 1
-
+            var reponseQuestion1 = prompt(question1).toLowerCase();
+            
+            // tant que c'est faux » tant q la reponseQuestion1 est différente reponse1 »  repose la question
+            while(  reponseQuestion1 != reponse1 ){
+                alert(messageErreur);
+                reponseQuestion1 = prompt(question1).toLowerCase();
+            }
+            alert(messageSucces);
+            // on affiche la seconde question  et on stocke la reponse données
+            var reponseQuestion2 = prompt(question2);
+            // est ce que la réponse donnée est égale à la réponse numérique ?
+            var reponse2NombreEstCorrect = parseInt(reponseQuestion2) === parseInt(reponse2);
+            // est ce que la réponse donnée est égale à la réponse textuelle ?
+            var reponse2TexteEstCorrect = reponseQuestion2.toLowerCase() === reponse2Text;
+            // tant que la réponse n'est juste ni en texte ni en chiffre : on repose la question
+            while(  !reponse2TexteEstCorrect && !reponse2NombreEstCorrect ){
+                alert(messageErreur);
+                reponseQuestion2 = prompt(question2);
+            }
+            alert(messageSucces);
         </script>
     </body>
 </html>
