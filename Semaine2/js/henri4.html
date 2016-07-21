@@ -21,28 +21,37 @@
             console.log("Réponse Utilisateur : " + responseQuestion1);
 
             // Fonction
+            // Première question
             if (responseQuestion1 == "blanc") {
+                // Si réponse correcte...
                 alert('Bravo');
-
+                //...on pose la  seconde question
                 var responseQuestion2 = prompt(question2);
-                console.log("Réponse utilisateur: " + responseQuestion2);
+
                 if ((responseQuestion2 == "sept") || responseQuestion2 == "7") {
+                    // Si réponse correcte...
                     alert('Bravo');
+                    // ... Sinon on reponse la seconde question
                 } else {
                     alert('Réponse incorrecte');
                     responseQuestion2 = prompt(question2);
                 };
+            // Si réponse incorrecte....
             } else {
                 alert('Réponse incorrecte');
+                // On repose la permière question
                 responseQuestion1 = prompt(question1);
 
                 if(responseQuestion1 == "blanc" ) {
+                    // Si réponse correcte...
                     alert('Bravo');
-
+                    // ... on pose la seconde question
                     var responseQuestion2 = prompt(question2);
-                    console.log("Réponse utilisateur: " + responseQuestion2);
+
                     if ((responseQuestion2 == "sept") || responseQuestion2 == "7") {
+                        // Si réponse correcte.
                         alert('Bravo');
+                        // Si réponse incorrecte
                     } else {
                         alert('Réponse incorrecte');
                     };
