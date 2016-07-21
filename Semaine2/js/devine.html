@@ -15,26 +15,39 @@
         </ul>
 
 <script type="text/javascript">
-    // Le programme tire un nombre entier au hasard entre 0 et 100
-    var nombre = Math.floor(Math.random()*100) + 1;
-    // Le joueur saisi un nombre entre 0 et 100
-    var choix = Number(prompt("Devinez un nombre entre 0 et 100 :"));
+    // Variables
+    var question = "Devinez un nombre entier entre 0 et 9 :";
+    var choixOrdi = Math.floor(Math.random() * 10);
+    // Pour contrôler le choix du programme et gérer les erreurs
+    console.log(choixOrdi);
 
-    // Tant que le nombre n'a pas été trouvé
-    while(choix !== nombre) {
-        // Si nombre trop grand
-        if(choix > nombre) {
+    // On pose la question pour deviner un nombre entre 0 et 100
+    var reponse = prompt(question);
+    reponse = parseInt(reponse);
+
+    // Si la réponse est différente du choix de l'Ordinateur
+    if (reponse != choixOrdi) {
+        if (reponse > choixOrdi) {
             alert("Trop grand");
-            choix = Number(prompt("Devinez un nombre entre 0 et 100 :"));
-        // Si nombre trop petit
+            reponse = parseInt(prompt(question));
+            if (reponse != choixOrdi) {
+                alert("Il fallait trouver " + choixOrdi);
+            } else {
+                alert("Bravo, la réponse était " + choixOrdi);
+            };
         } else {
             alert("Trop petit");
-            choix = Number(prompt("Devinez un nombre entre 0 et 100 :"));
-        // Sinon trouvé
+            reponse = parseInt(prompt(question));
+            if (reponse != choixOrdi) {
+                alert("Il fallait trouver " + choixOrdi);
+            } else {
+                alert("Bravo, la réponse était " + choixOrdi);
+            };
         };
+    } else {
+        alert("Bravo! La réponse était " + choixOrdi);
     };
-    alert("Trouvé!");
-    alert("La réponse était " + nombre);
+
 </script>
     </body>
 </html>
