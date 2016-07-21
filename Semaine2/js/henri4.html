@@ -13,31 +13,43 @@
                 <li>le script autorise 2 tentatives par question</li>
             </ul>
             <script type="text/javascript">
-                // Question posée
-                var reponse = prompt("De quelle couleur est le cheval blanc d'Henry IV?");
+            // Variables
+            var question1 = "De quelle couleur est le cheval d'Henry IV?";
+            var question2 = "Combien y a t-il de sept nains?";
 
-                /* Dans cette consdition, peu importe si la réponse est bonne ou fausse,
-                la seconde question sera quand même posée.*/
-                if (reponse == "blanc") {
-                    alert("Bravo!");
+            var responseQuestion1 = prompt(question1);
+            console.log("Réponse Utilisateur : " + responseQuestion1);
 
-                    var reponse2 = prompt("Combien y a t-il de sept nains?");
-                    if (reponse2 == "7") {
-                        alert("Bravo!");
+            // Fonction
+            if (responseQuestion1 == "blanc") {
+                alert('Bravo');
+
+                var responseQuestion2 = prompt(question2);
+                console.log("Réponse utilisateur: " + responseQuestion2);
+                if ((responseQuestion2 == "sept") || responseQuestion2 == "7") {
+                    alert('Bravo');
+                } else {
+                    alert('Réponse incorrecte');
+                    responseQuestion2 = prompt(question2);
+                };
+            } else {
+                alert('Réponse incorrecte');
+                responseQuestion1 = prompt(question1);
+
+                if(responseQuestion1 == "blanc" ) {
+                    alert('Bravo');
+
+                    var responseQuestion2 = prompt(question2);
+                    console.log("Réponse utilisateur: " + responseQuestion2);
+                    if ((responseQuestion2 == "sept") || responseQuestion2 == "7") {
+                        alert('Bravo');
                     } else {
-                        alert("Erreur, la réponse était '7'!");
+                        alert('Réponse incorrecte');
                     };
                 } else {
-                    alert("Erreur, la réponse était 'blanc'!")
-
-                    var reponse2 = prompt("Combien y a t-il de sept nains?");
-                    if (reponse2 == "7") {
-                        alert("Bravo!");
-                    } else {
-                        alert("Erreur, la réponse était '7'!");
-                    };
-                };
-
+                    alert('Réponse incorrecte')
+                }
+            };
             </script>
         </body>
     </html>
