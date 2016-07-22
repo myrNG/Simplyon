@@ -16,7 +16,44 @@
         </ul>
 
 <script type="text/javascript">
-        
+
+        // Variables
+        var question = prompt("Choisissez une opération (+ / - *): ");
+        var chiffre1 = Number(prompt("Saisissez un 1er chiffre :"));
+        var chiffre2 = Number(prompt("Saisissez un 2nd chiffre :"));
+
+        // Fonctions
+        function addition() {
+            var resultat = chiffre1 + chiffre2;
+            alert(resultat);
+        };
+        function division() {
+            var resultat = chiffre1 / chiffre2;
+            alert(resultat);
+        };
+        function soustraction() {
+            var resultat = chiffre1 - chiffre2;
+            alert(resultat);
+        };
+        function multiplication() {
+            var resultat = chiffre1 * chiffre2;
+            alert(resultat);
+        };
+
+        // Conditions
+        if (question == "+" ) {
+            addition()
+        } else if (question == "-") {
+            soustraction();
+        } else if (question == "/") {
+            division();
+        } else if (question == "*") {
+            multiplication();
+        } else {
+            alert("Saisie invalide");
+            question = prompt("Choisissez une opération (+ / - *): ");
+        };
+
 </script>
     </body>
 </html>
