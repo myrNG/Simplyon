@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login/Password</title>
+    </head>
+    <body>
+        <h1>Login / password</h1>
+        <h3>Le programme doit demander:</h3>
+        <p>
+            <ul>
+                <li>un identifiant</li>
+                <li>puis un mot de passe</li>
+            </ul>
+        </p>
+        <h3>Le programme doit vérifier que:</h3>
+        <p>
+            <ul>
+                <li>l'identifiant et le mot de passe proposés contiennent plus de 4 caractères</li>
+                <li>l'identifiant contient un @</li>
+                <li>l'identifiant est "joe@gmail.com" et son mot de passe "12345"</li>
+            </ul>
+        </p>
+        <p>Si l’identification est réussie, le programme affichera une alerte “Bienvenue”, sinon le programme affichera une alerte “Identifiant ou mot de passe incorrect” et proposera à nouveau de saisir l’identifiant ou le mot de passe.</p>
+        <script type="text/javascript">
+        // Variables
+        var identifiant = "joe@gmail.com";
+        var password = "12345";
+
+        var verifIdentifiant = 'Saisissez votre identifiant :';
+        var verifPassword = 'Saisissez votre mot de passe :';
+
+        var questionID = prompt(verifIdentifiant);
+        /* -------------------------------------------------------------- */
+        // Boucle "Tant que saisie est != de l'identifiant, on continue de poser la question"
+        while(questionID != identifiant) {
+                alert("Identifiant ou Mot de passe incorrect");
+                questionID = prompt(verifIdentifiant);
+        };
+        alert("Bienvenue Joe!");
+
+        // Boucle "Tant que saisie est != du mot de passe,, on continue de poser la question"
+        var questionPassword = prompt(verifPassword);
+        while(questionPassword != password) {
+            alert("Identifiant ou Mot de passe incorrect");
+            questionPassword = prompt(verifPassword);
+        };
+        alert("Mot de passe correct");
+
+
+
+        </script>
+    </body>
+</html>
