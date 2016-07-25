@@ -37,7 +37,9 @@
                 alert("Identifiant ou Mot de passe incorrect");
                 questionID = prompt(verifIdentifiant);
         };
-        alert("Bienvenue Joe!");
+        if((questionID.length > 4) && (questionID.indexOf("@") != -1)) {
+            alert("Bienvenue Joe!");
+        };
 
         // Boucle "Tant que saisie est != du mot de passe,, on continue de poser la question"
         var questionPassword = prompt(verifPassword);
