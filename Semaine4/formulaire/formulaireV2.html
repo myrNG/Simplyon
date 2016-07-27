@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulaire d'identification</title>
+        <link rel="stylesheet" href="style.css" media="screen">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a id="home " href="#">Home</a></li>
+                        <li><a id="about " href="#">A propos</a></li>
+                        <li><a id="contact " href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section>
+                <form id="identification">
+                    <fieldset>
+                        <legend>Identification</legend>
+                        <ol>
+                            <li>
+                                <label for="identifiant">Identifiant</label>
+                                <input type="text" name="identifiant" id="identifiant" autofocus required>
+                            </li>
+                            <li>
+                                <label for="mdp">Mot de passe</label>
+                                <input type="password" name="mdp" id="mdp" required>
+                            </li>
+                            <li>
+                                <label for="mdpBis">Mémoriser</label>
+                                <input type="checkbox" name="mdpBis" id="mdpBis" >
+                            </li>
+                        </ol>
+                    </fieldset>
+                    <fieldset id="validation">
+                        <button id="valider" type="button" name="valider">Valider</button>
+                        <button id="perdu" type="reset" name="reset">Mot de passe perdu ?</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>

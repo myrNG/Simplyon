@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(img/blur.jpeg) no-repeat  center fixed;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    font-family: Helvetica, sans-serif;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+}
+/*       HEADER       */
+
+    header {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+        #container nav ul {
+            list-style-type: none;
+            float: right;
+        }
+        #container nav li {
+            display: inline-block;
+            margin-right: 50px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #container nav li a {
+            text-decoration: none;
+            color: inherit;
+            letter-spacing: 3px;
+            font-weight: bolder;
+            font-size: 1em;
+        }
+        #container nav li a:hover {
+            /* color: #C1487B; */
+            border-bottom: 5px solid #fff;
+            padding-bottom: 7px;
+            transition: border .1s ease-in;
+        }
+    /*      SECTION     */
+    #identification {
+        width: 600px;
+        margin: 10% auto;
+        background-color: rgba(255,255,255,0.7);
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 10px 10px 5px #656565;
+    }
+        #identification fieldset {
+            border: none;
+        }
+            #identification legend {
+                text-align: center;
+                font-size: 1.5em;
+                letter-spacing: 3px;
+            }
+            #identification ol li {
+                list-style-type: none;
+                margin-bottom: 10px;
+            }
+                label {
+                    float: left;
+                    width: 100px;
+                    padding-right: 60px;
+                }
+                input {
+
+                }
+        #validation {
+        text-align: center;
+        }
+        button {
+
+        }
+        #valider {
+            background-color: #71D99A;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 7px 10px;
+        }
+            #valider:hover {
+                background-color: #5aad7b;
+                cursor: pointer;
+            }
+        #perdu {
+            background-color: #97C8FC;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 7px 10px;
+        }
+            #perdu:hover {
+                background-color: #78a0c9;
+                cursor: pointer;
+            }
