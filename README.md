@@ -31,7 +31,12 @@
 
 
 ###Semaine 3 <a id="semaine-3"></a>
-* **Défi 1:** [Login / password]()
+* **Défi 1:** [Login / password](https://github.com/myrNG/Simplyon/blob/master/Semaine3/login.html)
 * **Défi 2:** [Calcul mental]()
+* **Exo 1:** [Boucle 1](https://github.com/myrNG/Simplyon/blob/master/Semaine3/boucles1.html)
+* **Exo 2:** [Positionnement](https://github.com/myrNG/Simplyon/blob/master/Semaine3/position.html)
+* **Exo 3:** [FizzBuzz](https://github.com/myrNG/Simplyon/blob/master/Semaine3/fizzBuzz.html)
 
 ###Semaine 4 <a id="semaine-4"></a>
+* **Défi 1:** [Formulaire d'identification](https://github.com/myrNG/Simplyon/tree/master/Semaine4/formulaire)
+* **Exo 1:** [Notification](https://github.com/myrNG/Simplyon/blob/master/Semaine4/notification.html)
