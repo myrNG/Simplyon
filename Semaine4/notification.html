@@ -3,44 +3,42 @@
     <head>
         <meta charset="utf-8">
         <title>Notifications</title>
-        <style>
+        <style media="screen">
+        .notif {
+            width: 500px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            font-family: Helvetica, sans-serif;
+            color: #fff;
+            border-radius: 5px;
+            padding-left: 30px;
+            margin-top: 20px;
+        }
+        .valid {
+            background-color: #33DD66;
+            border: 2px solid #018001;
             
-            .notifValid, .notifError {
-                width: 500px;
-                padding-top: 7px;
-                padding-bottom: 7px;
-                font-family: Helvetica, sans-serif;
-                color: #fff;
-                border-radius: 5px;
-                padding-left: 50px;
-                margin-top: 20px;
-            }
-            .notifValid {
-                background-color: #33DD66;
-                border: 2px solid #018001;
-            }
-            .notifError {
-                background-color: #DD7701;
-                border: 2px solid #BB0000;
-            }
-            #warning {
-                position: relative;
-                top: -30px;
-                left: 16px;
-            }
-            #valid {
-                position: relative;
-                top: -90px;
-                left: -8px;
-            }
+        }
+        .valid::before {
+            content: url(http://www.rxlabz.com/simplon/files/icons/icon_check_white.png);
+            padding-right: 10px;
+        }
+        .error {
+            background-color: #DD7701;
+            border: 2px solid #BB0000;
+            vertical-align: middle;
+        }
+        .error::before {
+            content: url(http://www.rxlabz.com/simplon/files/icons/dialog-warning.png);
+            padding-right: 10px;
+
+        }
         </style>
     </head>
     <body>
-        <div class="notifValid">Bienvenue</div>
-	    <div class="notifError">Erreur</div>
+        <div class="notif valid">Bienvenue</div>
+	    <div class="notif error">Erreur</div>
 
-        <img src="img/dialog-warning.png" / id="warning">
-        <img src="img/icon_check_white.png"  id="valid"/>
-
+        <img src="" />
     </body>
 </html>
