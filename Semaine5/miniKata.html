@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Mini Kata</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            /*
+            * Texte / Chaines de caractères / String
+            * fonctions utiles : indexOf, slice, charAt, toLowerCase
+            * cf. https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String
+            */
+
+            // longueur
+            var texte = "un texte";
+
+
+            var nombreDeCaracteres = texte.length;
+            console.log('nombre de caracteres', nombreDeCaracteres); // 8
+
+            var quatriemeCaractere = texte[3] ;
+            console.log('quatrieme caractere', quatriemeCaractere ); // t
+
+
+            var quatriemeEtCinquiemeCaracteres = texte.substring(3, 5);
+            console.log('quatrieme et cinquieme caractere', quatriemeEtCinquiemeCaracteres ); // te
+
+
+            var majuscule = texte.toUpperCase();
+            console.log('majuscule', majuscule ); // UN TEXTE
+
+
+            var premierMot = texte.substring(0, 2);
+            console.log('premierMot', premierMot ); // un
+
+
+            var premierMotEnMajuscule = premierMot.toUpperCase();
+            console.log('premierMotEnMajuscule', /* ? */ ); // UN
+
+
+
+            /*
+            * nombres
+            * fonctions utiles : parseInt , parseFloat, isNaN
+            */
+
+            var valeur1 = '15';
+            var somme = valeur1 + 3;
+            console.log('somme == 18', somme == 18 ); // true
+
+            var age = 32;
+
+            console.log("J'ai " + age); // j'ai 32 ans
+
+            /*
+            * boucles & tableaux
+            */
+
+            var mails = ["Joe@gmAil.com", "LEA@test.com", "Bob@gmAil.com"];
+            var nombreDeMails = mails.length;
+            console.log('nombreDeMails', nombreDeMails );
+
+            var dernierMail = mails[mails.length - 1];
+            console.log('dernierMail', dernierMail );
+
+            // est ce que tout les mails sont gmail
+            for( var i = 0 ; i < mails.length ; i++ ){
+                if(!(mails[i]).includes("gmAil")) {
+                    var gmail = false;
+                    break;
+                } else {
+                    var gmail = true;
+                 }
+            }
+            console.log('tous les mails sont gmail' : gmail );
+
+
+            // mettre les mails en minuscules
+            var mailsMinuscule = [] ;
+            for( var i = 0 ; i < mails.length ; i++ ){
+                mailsMinuscule.push(mails[i]); // A chaque itération, on pousse le mail dans le tableau mailsMinuscule déclaré vide auparavant
+            }
+            console.log('mails en minuscules', mailsMinuscule.toString() ); // toString renvoi une chaîne de caractères
+            // TODO : remplacez les @ par des _
+            // TODO : supprimez les .com
+
+
+
+
+        </script>
+    </body>
+</html>
