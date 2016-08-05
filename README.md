@@ -43,3 +43,4 @@
 * **Exo 1:** [Notification](https://github.com/myrNG/Simplyon/blob/master/Semaine4/notification.html)
 
 ###Semaine 5 <a id="semaine-5"></a>
+* **Exo 1:** [Mini Kata](https://github.com/myrNG/Simplyon/blob/master/Semaine5/miniKata.html)
