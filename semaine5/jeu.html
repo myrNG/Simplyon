@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Pierre - Papier - Ciseaux</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var jeu = ["pierre", "feuille", "ciseaux", "puit"];
+        var scoreUser = 0;
+        var scoreOrdi = 0;
+
+
+        function partie() {
+            var choixUser = prompt("Bienvenue au jeu du Shifumi! \nÀ vous de jouer : \n-pierre \n-feuille \n-ciseaux \n-puit \nSaisissez votre choix :");
+            choixUser = choixUser.toLowerCase();
+            var choixOrdi = jeu[Math.floor(Math.random()*jeu.length)];
+            choixOrdi = choixOrdi.toLowerCase();
+
+            if(choixUser === choixOrdi) {
+                console.log("Égalité");
+                // Fin Égalité
+            } else if(choixUser === "pierre"){
+                if(choixOrdi === "feuille") {
+                    console.log("Perdu!");
+                    return scoreOrdi++;
+                } else if(choixOrdi === "ciseaux") {
+                    console.log("Gagné!");
+                    return scoreUser++;
+                } else  {
+                    console.log("Perdu!");
+                    return scoreOrdi++;
+                };
+            // Fin Pierre
+            } else if(choixUser === "feuille") {
+                if(choixOrdi === "pierre") {
+                    console.log("Gagné!");
+                    return scoreUser++;
+                } else if(choixOrdi === "ciseaux") {
+                    console.log("Perdu!");
+                    return scoreOrdi++;
+                } else  {
+                    console.log("Gagné!");
+                    return scoreUser++;
+                };
+            //Fin Feuille
+            } else if(choixUser === "ciseaux") {
+                if(choixOrdi === "pierre") {
+                    console.log("Perdu!");
+                    return scoreOrdi++;
+                } else if(choixOrdi === "feuille") {
+                    console.log("Gagné!");
+                    return scoreUser++;
+                } else {
+                    console.log("Perdu!");
+                    return scoreOrdi++;
+                };
+            // Fin Ciseaux
+            } else if(choixUser === "puit") {
+                if(choixOrdi === "pierre") {
+                    console.log("Gagné!");
+                    return scoreUser++;
+                } else if(choixOrdi === "feuille") {
+                    console.log("Perdu!");
+                    return scoreOrdi++;
+                } else {
+                    console.log("Gagné!");
+                    return scoreUser++;
+                };
+            // Fin Puit
+            } else {
+                console.log("Je n'ai pas compris votre choix");
+            }
+        };
+        while((scoreUser != 3) && (scoreOrdi != 3)) {
+                partie();
+
+        };
+        //partie();
+        console.log("Score Utilisateur : " + scoreUser);
+        console.log("Score Ordinateur : " + scoreOrdi);
+
+        </script>
+    </body>
+</html>
