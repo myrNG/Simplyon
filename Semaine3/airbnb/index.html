@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AirBnB - Homepage</title>
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- PARTIE HEADER -->
+            <header>
+
+                <!-- Barre de navigation -->
+                <nav>
+                    <div><!--Voir si on peut se passer de mettre une div pour l'image -->
+                        <a href="index.html"><img id="logo" src="img/logo.png" alt="logo AirBnB"></a>
+                    </div>
+                    <div class="navbar">
+                        <ul>
+                            <li><a class="active" href="#">Devenez hôte</a></li>
+                            <li><a href="#">Aide</a></li>
+                            <li><a href="#">Inscription</a></li>
+                            <li><a href="#">Connexion</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--  Titre entête -->
+                <div class="entete">
+                    <h1>Vivez là-bas</h1>
+                    <h4>Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.</h4>
+                </div>
+                <!-- Bandeau semi-transparent avec formulaire  -->
+                <div class="bandeau">
+                    <div class="search">
+                    <form action="">
+                        <input id="ou" type="text" name="name" value="Ou ?" placeholder="Où?">
+                        <input id="arrivee" type="text" name="name" value="Arrivee ?" placeholder="Arrivée?">
+                        <input id="depart" type="text" name="name" value="Depart ?" placeholder="Départ ?">
+                        <select id="voyageur" name="voyageur">
+                                <option value="">Voyageur 1</option>
+                                <option value="">Voyageur 2</option>
+                                <option value="">Voyageur 3</option>
+                                <option value="">Voyageur 4</option>
+                                <option value="">Voyageur 5</option>
+                                <option value="">Voyageur 6</option>
+                                <option value="">Voyageur 7</option>
+                                <option value="">Voyageur 8</option>
+                                <option value="">Voyageur 9</option>
+                                <option value="">Voyageur 10</option>
+                            </select>
+                        <input type="button" name="rechercher" value="Rechercher">
+                    </form>
+                    </div>
+                </div>
+            </header>
+
+            <!-- PARTIE SECTION -->
+            <section>
+                <!-- Div entête   -->
+                <div class="entete2">
+                        <img id="imgHome" src="img/travel.jpg" alt="Home">
+                    <div class="texte">
+                        <p><span class="texte-h4">Ouvrez la porte à un voyageur et à une nouvelle vie</span></p>
+                        <p id="texte_p">Gagnez de l'argent en accueillant des voyageurs. </p>
+                        <button id="btRecherche" type="button" name="button">Estimer mes revenus</button>
+                    </div>
+                </div>
+                <!-- Partie texte se trouvant entre les div -->
+                <div class="sousTitre">
+                    <h4>Juste pour le week-end</h4>
+                    <p>Découvrez de nouveaux logements incroyables près de chez vous.</p>
+                </div>
+                <!-- Partie avec 3 images en miniatures -->
+                <div class="miniatures">
+                    <img id="tokyo_img" src="img/tokyo.png" alt="Tokyo">
+                    <img id="kyoto_img" src="img/kyoto.png" alt="Kyoto">
+                    <img id="hiroshima_img" src="img/hiroshima.png" alt="Hiroshima">
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

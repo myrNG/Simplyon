@@ -1,0 +1,207 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    font-size: 14px;
+}
+/*      HEADER        */
+header {
+    background-color: gray;
+    background: url(../img/tokyo_top.jpg) no-repeat center fixed;
+    background-size: cover;
+    color: #fff;
+    height: 600px;
+    position: relative;
+}
+/*   Navbar         */
+nav {
+    display: flex;
+    padding-top: 1%;
+    align-items: center;
+    justify-content: space-around;
+}
+#logo {
+    width: 10%;
+    position: relative;
+    left: 20px;
+}
+.navbar {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+.navbar ul {
+    list-style-type: none;
+}
+.navbar ul li {
+    display: inline;
+    padding: 5px 10px;
+}
+.navbar ul li a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    margin: 2px 16px;
+
+}
+.navbar .active {
+  border: 2px solid white;
+  padding: 5px 10px;
+}
+.navbar .active:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+.bandeau {
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.bandeau form {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 2% 5%;
+    position: relative;
+    left: 20%;
+}
+.bandeau form input {
+  font-family: Helvetica;
+  float: left;
+  border: none;
+}
+.bandeau .search {
+
+}
+.bandeau [type="text"] {
+    padding: 10px;
+}
+#voyageur {
+  padding: 11px;
+  float: left;
+}
+.bandeau [type="button"] {
+    background-color: #ff5a5f;
+    color: #fff;
+    padding: 10px 20px;
+    border-style: none;
+}
+.bandeau [type="button"]:hover {
+    background-color: #FF7E82;
+    cursor: pointer;
+}
+#ou {
+    width: 380px;
+}
+.bandeau #voyageur {
+    padding: 8px 10px;
+}
+.entete {
+    margin: auto;
+    width: 70%;
+}
+.entete h1 {
+    text-align: center;
+    font-size: 60px;
+    padding-top: 6%;
+    text-transform: uppercase;
+}
+.entete h4 {
+    text-align: center;
+    font-size: 18px;
+}
+/*       SECTION        */
+
+section {
+    width: 1000px;
+    margin: 3% auto;
+    color: #484848;
+}
+section .entete2 {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+}
+#imgHome {
+    width: 80%;
+}
+section .entete2 {
+    display: flex;
+    justify-content: space-around;
+}
+.img-background {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.imgHome {
+    width: 100%;
+}
+.texte {
+    padding: 2%;
+    vertical-align: middle;
+    line-height: 1.43;
+    margin: 3% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.texte-h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+#texte_p {
+  font-size: 1.3em;
+}
+#btRecherche{
+    background-color: #007a87;
+    color: #fff;
+    border-style: none;
+    padding: 17px 20px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 2px;
+}
+#btRecherche:hover {
+  background-color: #009AAB;
+  cursor: pointer;
+}
+section {
+  width: 1032px;
+}
+.sousTitre {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+#imgHome:hover {
+  cursor: pointer;
+}
+.sousTitre h4 {
+    font-size: 32px;
+    margin: 50px auto 10px;
+}
+.sousTitre p {
+    margin-top: 0;
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+.miniatures {
+  display: table-cell;
+  display: flex;
+  justify-content: space-between;
+}
+.miniatures img {
+    width: 327px;
+    height: 344px;
+}
+.miniatures img:hover {
+  cursor: pointer;
+}
