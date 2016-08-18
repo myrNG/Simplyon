@@ -26,6 +26,7 @@
             var quatriemeEtCinquiemeCaracteres = texte.substring(3, 5);
             console.log('quatrieme et cinquieme caractere', quatriemeEtCinquiemeCaracteres ); // te
 
+            var mots = texte.split(' ');
 
             var majuscule = texte.toUpperCase();
             console.log('majuscule', majuscule ); // UN TEXTE
@@ -61,32 +62,42 @@
             var nombreDeMails = mails.length;
             console.log('nombreDeMails', nombreDeMails );
 
-            var dernierMail = mails[mails.length - 1];
+            var dernierMail = mails[mails.length - 1]; // -1 car le tableau commence à zéro!
             console.log('dernierMail', dernierMail );
 
             // est ce que tout les mails sont gmail
             for( var i = 0 ; i < mails.length ; i++ ){
-                if(!(mails[i]).includes("gmAil")) {
+                if(!(mails[i]).includes("gmAil")) { // includes() == JS2015 prérérer indexOf() pour l'instant
                     var gmail = false;
                     break;
                 } else {
-                    var gmail = true;
+                    gmail = true;
                  }
-            }
+            };
             console.log('tous les mails sont gmail' : gmail );
 
 
             // mettre les mails en minuscules
             var mailsMinuscule = [] ;
             for( var i = 0 ; i < mails.length ; i++ ){
-                mailsMinuscule.push(mails[i]); // A chaque itération, on pousse le mail dans le tableau mailsMinuscule déclaré vide auparavant
+                mailsMinuscule.push(mails[i].toLowerCase()); // A chaque itération, on pousse le mail dans le tableau mailsMinuscule déclaré vide auparavant
             }
             console.log('mails en minuscules', mailsMinuscule.toString() ); // toString renvoi une chaîne de caractères
             // TODO : remplacez les @ par des _
+            var mailSansArobase = [];
+            for(var i = 0; i < mailsMinuscule.length; i++) {
+                var mailSansArobase = mailsMinuscule[i].replace("@", "_");
+                mailSansArobase.push(mailSansArobase);
+            }
+            console.log('mails sans @ ', mailSansArobase.toString() );
+
             // TODO : supprimez les .com
-
-
-
+            var mailSansCom = [];
+            for(var i = 0; i < mailsMinuscule.length; i++) {
+                var mailSansCom = mailsMinuscule[i].replace(".", "");
+                mailSansCom.push(mailSansCom);
+            }
+            console.log('mails sans .com ', mailSansCom.toString() );
 
         </script>
     </body>
