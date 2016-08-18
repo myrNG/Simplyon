@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Mini-kata tableau</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var prenom = "paul";
+
+        function capitalize(texte) { // replace et substring
+            var maj = texte.charAt(0).toUpperCase();
+            texte = texte.slice(1, texte.length);
+            texte = maj.concat(texte);
+            return texte;
+        }
+
+            console.log('prenom avec premiere lettre en majuscule', capitalize(prenom)); //Paul
+
+            var users = ["joe", "lea", "bob", "ann"];
+            // Affiche les 1eres lettre des éléments du tableau en majuscules
+            for (var i = 0; i < users.length; i++) {
+
+                  var maj = users[i].charAt(0).toUpperCase() + users[i].slice(1);
+                 // users[i] = users[i].slice(1, users[i].length); SOUVENIRS
+                  users[i] = maj;
+
+            };
+
+            console.log('Prenoms avec premiere lettre en majuscule', users); //Joe, Lea, Bob, Ann
+
+            // TODO : liste des prenoms qui commencent par une voyelle
+            // TODO : liste des prenoms qui commencent par une console
+
+            var prenomsVoyelles = []; // Doit contenir Ann
+            var prenomsConsonnes = []; // // Doit contenir Joe, Lea et Bob
+
+            var voyelles = "aeiouy";
+            for (var i = 0; i < users.length; i++) { // On parcourt le tableau
+              if(voyelles.indexOf(users[i].charAt(0)) != -1) { // Si la 1ere lettre de users n'est pas une voyelle, on le pousse dans le tableau des consonnes
+                prenomsVoyelles.push(users[i]);
+
+                } else {
+                  prenomsConsonnes.push(users[i]);
+
+                }
+            };
+            console.log("Tableau consonnes : " + prenomsConsonnes);
+            console.log("Tableau voyelles : " + prenomsVoyelles);
+
+
+
+
+
+            var notes = [10, 12, 13, 4, 8];
+            var somme = 0;
+
+                for(var i = 0; i < notes.length; i++) {
+                somme += notes[i];
+            };
+
+            console.log('somme des notes', somme);
+
+
+            var moyenne = somme / notes;
+            console.log('moyenne', moyenne);
+
+            var nouvelleNote = 12;
+
+
+            notes = notes.push(nouvelleNote);
+
+
+            somme = somme + nouvelleNote;
+            console.log('somme des notes', somme);
+
+            // TODO : calcul de la nouvelle moyenne
+            moyenne = somme / notes;
+            console.log('moyenne', moyenne);
+
+            // TODO : trouvez la note la plus haute
+            // Tri du tableau
+            notes.sort(function(a, b) {
+                return a - b;
+            });
+            // console.log(notes) ===> [4, 8, 10, 12, 13]
+            console.log('meilleure note', /* ? */);
+
+            // TODO : trouvez la note la plus mauvaise
+            console.log('plus mauvaise note', /* ? */);
+
+
+            // TODO : passage en fonctions
+            function calculSomme( tableauDeNotes ){
+                var somme = 0;
+                for(var i = 0; i < notes.length; i++) {
+                somme += notes[i];
+                }
+                return somme;
+            }
+
+            function calculMoyenne( tableauDeNotes ){
+                var moyenne = somme / tableauDeNotes;
+                return moyenne;
+            }
+        </script>
+    </body>
+</html>
