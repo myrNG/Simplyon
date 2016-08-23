@@ -70,4 +70,32 @@ var vid = document.getElementById("myVideo");
 vid.controls = true;  
 ```  
 * **currentSrc**  
-La propriété currentSrc retourne l'URL de la vidéo ou du fichier audio présent. S'il n'y a pas de vidéo ni d'audio, une chaine de caractères vide est retournée.
+La propriété currentSrc retourne l'URL de la vidéo ou du fichier audio présent. S'il n'y a pas de vidéo ni d'audio, une chaine de caractères vide est retournée.  
+```javascript
+var vid = document.getElementById("myVideo");
+alert(vid.currentSrc);
+```  
+* **defaultMuted**  
+Le média audio ou vidéo est muet par défaut.  
+```javascript
+var vid = document.getElementById("myVideo");
+vid.defaultMuted = true;
+```  
+* **loop**  
+Précise si le fichier audio ou vidéo doit jouer en boucle.  
+```javascript
+var vid = document.getElementById("myVideo");
+vid.loop = true;
+```  
+* **preload**  
+Spécifie si le fichier audio ou vidéo doit commencer à charger dès que la page se charge.  
+```javascript
+var vid = document.getElementById("myVideo");
+vid.preload = "auto";
+```  
+* **volume**  
+Renvoie le volume actuel du média  
+```javascript
+var vid = document.getElementById("myVideo");
+vid.volume = 0.2;
+```
