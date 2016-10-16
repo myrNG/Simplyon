@@ -5,14 +5,7 @@
         <title>QCM</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <?php
 
-        $_GET['pays'];
-        $espagne= "Bonne réponse, c'est bien le drapeau de l'Espagne!";
-        $france = "FAUX! Il s'agit de celui de la France...";
-        $italie = "FAUX! Il s'agit de celui de l'Italie...";
-
-     ?>
     <body>
         <div id="container">
             <h1>QCM</h1>
@@ -33,6 +26,11 @@
             </div>
             <p id="reponse">
                 <?php
+                $_GET['pays'];
+                $espagne= "Bonne réponse, c'est bien le drapeau de l'Espagne!";
+                $france = "FAUX! Il s'agit de celui de la France...";
+                $italie = "FAUX! Il s'agit de celui de l'Italie...";
+
                 if(isset($_GET['pays'])) {
                     if($_GET['pays'] === 'espagne') {
                         echo $espagne;
