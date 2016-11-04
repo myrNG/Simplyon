@@ -1,6 +1,6 @@
 <?php
     $errorMessage = '';
-    $savedLogin = '';
+    $savedEmail = '';
 
     // SI tous les champs sons saisis:
     if(isset($_POST['email']) && isset($_POST['mdp']) && isset($_POST['mdpBis'])) {
@@ -21,7 +21,7 @@
             } else {
                 // Message d'erreur de saisie
                 $loginFailed = true;
-                $savedLogin = 'value="'.$login.'"';
+                $savedEmail = 'value="'.$email.'"';
                 $errorMessage = '<div class="">Erreur d\'identification</div>';
             }
         }
