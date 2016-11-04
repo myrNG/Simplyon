@@ -1,3 +1,32 @@
+<?php
+    $errorMessage = '';
+    $savedLogin = '';
+
+    // SI tous les champs sons saisis:
+    if(isset($_POST['email']) && isset($_POST['mdp']) && isset($_POST['mdpBis'])) {
+        // Stockage des champs
+        $email = $_POST['email'];
+        $mdp = $_POST['mdp'];
+        $mdpBis = $_POST['mdpBis'];
+
+        // 4 caractères minimum
+        if(strlen($email) > 3 && strlen($mdp) > 3) {
+            // mot de passe et confirmation identiques
+            if($mdp === $mdpBis) {
+                $user = [
+                    "email" => $email,
+                    "mdp" => $mdp
+                ];
+                $loginFailed = false;
+            } else {
+                // Message d'erreur de saisie
+                $loginFailed = true;
+                $savedLogin = 'value="'.$login.'"';
+                $errorMessage = '<div class="">Erreur d\'identification</div>';
+            }
+        }
+    }
+ ?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -10,6 +39,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <?php
+            /*include "header.php";*/
+
+            if(!isset($user)) {
+        ?>
         <div class="mdl-layout mdl-js-layout">
             <div class="mdl-layout__content">
                 <!-- Div du formulaire -->
@@ -20,7 +54,8 @@
                     </div>
                     <!-- Formulaire -->
                     <div class="mdl-card__supporting-text">
-                        <form id="" action="verification.php" method="post">
+                        <?php /*if (isset($loginFailed)) */ echo $errorMessage; ?>
+                        <form id="" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
                             <!-- Email -->
                             <div class="mdl-textfield mdl-js-textfield champs">
                                 <label class="mdl-textfield__label" for="email">Email </label>
@@ -44,6 +79,12 @@
                 </div>
             </div>
         </div>
+        <?php
+    } else {
+        include "validation.php";
+
+    }
+         ?>
 
         <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     </body>
