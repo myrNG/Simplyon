@@ -7,7 +7,7 @@
         $mdpBis = $_POST['mdpBis'];
 
         // 4 caractères minimum
-        if(strlen($email) > 3 && strlen($mdp) > 3 && strlen($mdpBis) > 3) {
+        if(strlen($email) > 3 && strlen($mdp) > 3) {
             // mot de passe et confirmation identiques
             if($mdp === $mdpBis) {
                 // Début de session
