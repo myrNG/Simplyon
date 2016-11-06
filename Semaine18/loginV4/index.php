@@ -40,8 +40,7 @@
     </head>
     <body>
         <?php
-            /*include "header.php";*/
-
+            // Si l'utilisateur ne s'est pas identifié, lui proposer de le faire :
             if(!isset($user)) {
         ?>
         <div class="mdl-layout mdl-js-layout">
@@ -81,11 +80,30 @@
         </div>
         <?php
     } else {
-        include "validation.php";
-
-    }
+        /*include "validation.php";*/
          ?>
+         <!-- Sinon, validation Ok : -->
+         <div class="mdl-layout__content">
+             <div class="mdl-card mdl-shadow--6dp">
+                 <!-- Titre -->
+                 <div class="mdl-card__title">
+                     <h3 class="mdl-card__title-text">Merci!</h3>
+                 </div>
+                 <!-- Message -->
+                 <div class="mdl-card__supporting-text">
+                     Compte crée! Un email a été envoyé à <?php echo $email; ?> !
+                 </div>
+                 <!-- Bouton Deconnection eventuellemet -->
+                 <div class="mdl-card__actions">
+                     <?php
+                         if( isset($user) )
+                             echo '<a href="'.$_SERVER['PHP_SELF'].'">Déconnexion</a>';
+                     ?>
+                 </div>
+             </div>
+         </div>
 
+         <?php } ?>
         <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     </body>
 </html>
