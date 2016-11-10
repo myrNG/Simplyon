@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax - Chargement de données</title>
+
+    <script type="text/javascript">
+        var requete;
+        /* CHARGEMENT Texte simple*/
+        function loadText() {
+            requete = new XMLHttpRequest();
+            // au chargement on affiche le texte reçu ds la console et sur la page
+            requete.onload = function (e) {
+                console.log('data', this.responseText);
+                var paragraph = document.createElement('p');
+                paragraph.appendChild(document.createTextNode('Reçu : ' + e.target.responseText));
+                document.getElementById('bloc-text').appendChild(paragraph);
+            }
+            requete.onerror = onError;
+            requete.open('get', 'texte.txt', true);
+            requete.send();
+        }
+        /* CHARGEMENT Texte contenant données structurées : liste de users
+         * on connait le 'format' du fichier texte » on peut le parser / "décoder"
+         * */
+        function loadDataText() {
+            requete = new XMLHttpRequest();
+            // au chargement on affiche le texte reçu ds la console et sur la page
+            requete.onload = onDataText.bind(this);
+            requete.onerror = onError;
+            requete.open('get', 'users.txt', true);
+            requete.send();
+        }
+        function onDataText(e) {
+            console.log('onDataText', this.responseText); // this.responseText n'est pas défini
+            var users = parseTextData(e.target.responseText);
+            var userList = document.createElement('ul');
+            users.forEach(function (user) {
+                var userLi = document.createElement('li');
+                userLi.innerText = user[0] + ' , ' + user[1] + ' , ' + user[2];
+                userList.appendChild(userLi);
+            });
+            document.getElementById('bloc-data-text').appendChild(userList);
+        }
+        function parseTextData(text) {
+            var users = text.split('/');
+            return users.map(function (userText) {
+                return userText.split(',');
+            });
+        }
+        /* CHARGEMENT Texte contenant données structurées : liste de users JSON
+         * le navigateur sait analyser le JSON et le transformer en objet JS plus simples à manipuler
+         * */
+        function loadJSON() {
+            requete = new XMLHttpRequest();
+            // au chargement on affiche le texte reçu ds la console et sur la page
+            requete.onload = onJSON;
+            requete.onerror = onError;
+            requete.open('get', 'users.json', true);
+            requete.send();
+        }
+        function onJSON(e) {
+            console.log('onDataText', this.responseText); // this.responseText est défini
+            var users = JSON.parse(this.responseText)['users'];
+            var userList = document.createElement('ul');
+            users.forEach(function (user) {
+                var userLi = document.createElement('li');
+                userLi.innerText = user.lastname + ' ' + user.firstname + ' » ' + user.mail;
+                userList.appendChild(userLi);
+            });
+            document.getElementById('bloc-json').appendChild(userList);
+        }
+        /* TODO » fonction de chargement et d'affichage du fichier users.csv
+         */
+        function loadCSV() {
+            requete = new XMLHttpRequest();
+
+            requete.onload = onDataCSV;
+            requete.onerror = onError;
+            requete.open('get', 'texte.csv', true);
+            requete.send();
+        }
+        function onDataCSV(e) {
+            console.log('onDataCSV', this.responseText); // this.responseText n'est pas défini
+            var infos = parseCSVData(e.target.responseText);
+            var infoList = document.createElement('ul');
+            infos.forEach(function (info) {
+                var infoLi = document.createElement('li');
+                infoLi.innerText = info[0] + ' ' + info[1] + ' ' + info[2];
+                infoList.appendChild(infoLi);
+            });
+            document.getElementById('bloc-csv').appendChild(infoList);
+        }
+        function parseCSVData(text) {
+            var infos = text.split('\n');
+            return infos.map(function (infoText) {
+                return infoText.split(',');
+            });
+        }
+
+        function onError(e) {
+            alert("Erreur : ", e);
+        }
+    </script>
+
+</head>
+<body>
+
+
+<p id="bloc-text">
+    <button onclick="loadText()">chargement texte simple</button>
+</p>
+<p id="bloc-data-text">
+    <button onclick="loadDataText()">chargement texte "complexe"</button>
+</p>
+<p id="bloc-json">
+    <button onclick="loadJSON()">chargement texte "json"</button>
+</p>
+<p id="bloc-csv">
+    <button onclick="loadCSV()">chargement texte "csv"</button>
+</p>
+
+</body>
+</html>
