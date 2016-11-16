@@ -19,6 +19,17 @@
                     hr {
                         max-width: 80%;
                     }
+                    #bloc-json {
+                        max-width: 70%;
+                        margin: auto;
+                    }
+                        .boutons {
+                            background: #2980b9;
+                            color: #FFF;
+                            border: none;
+                            padding: 5px 10px;
+                            text-transform: uppercase;
+                        }
 
         </style>
     </head>
@@ -27,9 +38,13 @@
             <h1>Informations utilisateurs</h1>
             <hr>
             <div id="bloc-json">
-                <button onclick="loadJSON()">Afficher les utilisateurs</button>
-                <button onclick="hideJSON()">Cacher les utilisateurs</button>
-                <div id="apercu"></div>
+                <button class="boutons" onclick="loadJSON()">Afficher</button>
+                <button class="boutons" onclick="hideJSON()">Cacher</button>
+                <button class="boutons" onclick="addJSON()">Ajouter</button>
+                <div id="apercu">
+                    <p></p>
+                </div>
+
             </div>
         </div>
 
