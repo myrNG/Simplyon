@@ -1,0 +1,16 @@
+{
+    "infos" : [
+        {
+            "nom" : "Myriam",
+            "prenom" : "NG",
+            "email" : "mymy@yahoo.fr",
+            "ville" : "Grenoble"
+        },
+        {
+            "nom" : "Lucie",
+            "prenom" : "NG",
+            "email" : "lulu@yahoo.fr",
+            "ville" : "Paris"
+        }
+    ]
+}

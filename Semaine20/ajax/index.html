@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Requetes Ajax</title>
+        <style media="screen" type="text/css">
+            body {
+                font-family: sans-serif;
+            }
+                .bloc {
+                    max-width: 700px;
+                    border: 1px solid black;
+                    margin: auto;
+                }
+                    h1 {
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                    hr {
+                        max-width: 80%;
+                    }
+
+        </style>
+    </head>
+    <body>
+        <div class="bloc">
+            <h1>Informations utilisateurs</h1>
+            <hr>
+            <div id="bloc-json">
+                <button onclick="loadJSON()">Afficher les utilisateurs</button>
+                <button onclick="hideJSON()">Cacher les utilisateurs</button>
+                <div id="apercu"></div>
+            </div>
+        </div>
+
+
+        <!-- Script -->
+        <script src="app.js"></script>
+    </body>
+</html>
