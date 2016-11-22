@@ -1,0 +1,10 @@
+.mdl-card {
+    margin: 4vh auto;
+    width: 25vw;
+}
+img {
+    width: 220px;
+    height: 140px;
+    border: 0;
+    padding: 20px;
+}

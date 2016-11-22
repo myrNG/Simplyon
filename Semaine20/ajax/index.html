@@ -1,59 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="Cache-Control" content="no-cache">
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Expires" content="0">
-        
-        <title>Requetes Ajax</title>
-        <style media="screen" type="text/css">
-            body {
-                font-family: sans-serif;
-            }
-                .bloc {
-                    max-width: 700px;
-                    border: 1px solid black;
-                    margin: auto;
-                }
-                    h1 {
-                        text-align: center;
-                        text-transform: uppercase;
-                    }
-                    hr {
-                        max-width: 80%;
-                    }
-                    #bloc-json {
-                        max-width: 70%;
-                        margin: auto;
-                    }
-                        .boutons {
-                            background: #2980b9;
-                            color: #FFF;
-                            border: none;
-                            padding: 5px 10px;
-                            text-transform: uppercase;
-                        }
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        </style>
+        <title>Requetes Ajax</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="bloc">
-            <h1>Informations utilisateurs</h1>
-            <hr>
-            <div id="bloc-json">
-                <button class="boutons" onclick="loadJSON()">Afficher</button>
-                <button class="boutons" onclick="hideJSON()">Cacher</button>
-                <button class="boutons" onclick="addJSON()">Ajouter</button>
-                <div id="apercu">
-                    <p></p>
+            <div class="mdl-card">
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Users Members</h2>
                 </div>
+                <div class="mdl-card__media">
+                    <img src="melitopol.jpeg" alt="">
+                </div>
+                <div class="mdl-card__actions">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="loadJSON()">Afficher</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="hideJSON()">Cacher</button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="addJSON()">Ajouter</button>
+                </div>
+                <div id="apercu" class="mdl-card__supporting-text">
+
+                </div>
+
+            </div>
+            <div>
+
 
             </div>
         </div>
 
 
         <!-- Script -->
+        <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

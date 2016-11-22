@@ -10,6 +10,7 @@ function loadJSON() {
             requete.open('get', 'infos.json', true);
             requete.send();
 };
+
 // Fonction qui charge et affiche les infos utilisateur
 function onJSON(e) {
             console.log('Données JSON', this.responseText); // this.responseText est défini
@@ -31,18 +32,17 @@ function onJSON(e) {
             if (requete.readyState === 4) {
                 console.log('requete statut :', requete.readyState);
             };
-            //FIXME détruire les données pour réinitialiser
         };
+
 // Fonction qui cache les infos utilisateurs
 function hideJSON(e) {
         while(apercu.firstChild) {
             apercu.removeChild(apercu.firstChild);
         }
-
 };
 
 function addJSON(e) {
-
+    
 };
 function onError(e) {
                 alert("Ne fonctionnera qu'avec un serveur :) ", e);
