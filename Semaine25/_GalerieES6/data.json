@@ -1,0 +1,25 @@
+{
+  "titre": "Galerie",
+  "photos": [
+    {
+      "titre": "photo1",
+      "url": "img/photo1.jpg",
+      "description": "description photo 1"
+    },
+    {
+      "titre": "photo2",
+      "url": "img/photo2.jpg",
+      "description": "description photo 2"
+    },
+    {
+      "titre": "photo3",
+      "url": "img/photo3.jpg",
+      "description": "description photo 3"
+    },
+    {
+      "titre": "photo4",
+      "url": "img/photo4.jpg",
+      "description": "description photo 4"
+    }
+  ]
+}
