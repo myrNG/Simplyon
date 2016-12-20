@@ -96,8 +96,10 @@ class ViewManager {
         let image = tag('img');
         let description = tag('p');
         titre.innerHTML = photos.titre;
+        titre.classList.add('titre');
         image.setAttribute("src", photos.url);
         description.innerHTML = photos.description;
+        description.classList.add('description');
         this.divPhotoBox.appendChild(titre);
         this.divPhotoBox.appendChild(image);
         this.divPhotoBox.appendChild(description);
