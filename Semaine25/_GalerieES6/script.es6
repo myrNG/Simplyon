@@ -90,6 +90,7 @@ class ViewManager {
         console.log('photos', photos);
         // Box Photo
         this.divPhotoBox = tag('div');
+        this.divPhotoBox.classList.add('photo');
         document.getElementById('container').appendChild(this.divPhotoBox);
         let titre = tag('h3');
         let image = tag('img');
