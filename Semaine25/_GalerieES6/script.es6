@@ -77,6 +77,8 @@ class ViewManager {
         let photoRenderers = this._photos.map((p) => this.displayPhotos(p)); // <=  équivalent à New VueProduit() dans Boutique es6
         console.log('photoRenderers', photoRenderers);
         photoRenderers.forEach((i) => document.getElementById('container').appendChild(i));
+        this.displayTitle();
+
     }
 
     displayTitle(title) {
@@ -84,6 +86,7 @@ class ViewManager {
         let cardTitle = tag('h2');
         cardTitle.innerHTML = title;
         document.getElementById('header').appendChild('cardTitle');
+        return cardTitle;
     }
 
     displayPhotos(photos) {
